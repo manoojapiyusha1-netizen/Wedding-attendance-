@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wedding Celebration - Baanu & Raveena</title>
-    <!-- Premium Editorial Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=400;500;600&family=Montserrat:wght=200;300;400;500&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --luxury-bg: #fbf9f6;        /* Soft Premium Cream */
-            --luxury-card: #ffffff;      /* Pure Minimal White */
-            --gold-accent: #c5a059;     /* Refined Champagne Gold */
-            --text-dark: #232b28;       /* Deep Luxury Charcoal */
-            --text-muted: #6e7773;      /* Editorial Muted Slate */
-            --border-light: #f0eae1;    /* Soft Muted Border */
+            --luxury-bg: #fbf9f6;        
+            --luxury-card: #ffffff;
+            --gold-accent: #c5a059; 
+            --text-dark: #232b28;       
+            --text-muted: #6e7773;      
+            --border-light: #f0eae1;
         }
 
         * {
@@ -39,7 +38,6 @@
             body { padding: 40px 15px; }
         }
 
-        /* High-End Wrapper */
         .luxury-container {
             max-width: 550px;
             width: 100%;
@@ -63,7 +61,6 @@
             pointer-events: none;
         }
 
-        /* Header Section */
         .main-header {
             margin-top: 10px;
             margin-bottom: 25px;
@@ -97,7 +94,6 @@
             opacity: 0.6;
         }
 
-        /* INTERACTIVE COUPLE CARDS (Baanu & Raveena) */
         .couple-grid {
             display: flex;
             gap: 10px;
@@ -177,8 +173,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* PREMIUM LIQUID SLIDING NAVIGATION TABS */
+        
         .tabs-wrapper {
             position: relative;
             margin: 25px 0;
@@ -225,7 +220,6 @@
             transform: translateX(0%);
         }
 
-        /* TAB CONTENT PANELS */
         .tab-content-container {
             position: relative;
             min-height: 220px;
@@ -245,7 +239,6 @@
             transform: translateY(0);
         }
 
-        /* ACCORDION LUXURY STYLING */
         .accordion-item {
             border: 1px solid var(--border-light);
             margin-bottom: 10px;
@@ -297,7 +290,7 @@
             font-weight: 300;
         }
 
-        /* MENU LISTS */
+        
         .menu-list-items { list-style: none; }
         .menu-list-items li {
             position: relative;
@@ -313,12 +306,10 @@
             color: var(--gold-accent);
         }
 
-        /* VENUE & MAP STYLING - FIXED FULL LOCATION EMBED WITH OFFICIAL GOOGLE PIN */
         .hotel-info { font-size: 0.78rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 15px; }
         .hotel-title { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 5px; }
         .map-container { width: 100%; height: 220px; border: 1px solid var(--border-light); margin-top: 15px; }
 
-        /* TIMELINE STYLING */
         .timeline-wrapper { padding-left: 10px; }
         .timeline-box { border-left: 1px solid var(--gold-accent); padding-left: 20px; position: relative; margin-bottom: 20px; }
         .timeline-box::before { content: ''; position: absolute; left: -4px; top: 4px; width: 7px; height: 7px; background: var(--text-dark); transform: rotate(45deg); }
@@ -326,7 +317,6 @@
         .timeline-title { font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--text-dark); margin-bottom: 4px; }
         .timeline-desc { font-size: 0.75rem; color: var(--text-muted); font-weight: 300; }
 
-        /* RSVP SECTION & FORM STYLING */
         .rsvp-section-wrapper {
             margin-top: 35px;
             min-height: 200px;
@@ -346,7 +336,6 @@
         .btn-luxury-submit { width: 100%; background: var(--text-dark); color: #ffffff; border: 1px solid var(--text-dark); padding: 14px; font-family: 'Montserrat', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: background 0.3s ease; }
         .btn-luxury-submit:disabled { background: var(--text-muted); cursor: not-allowed; opacity: 0.6; }
 
-        /* SUCCESS MESSAGE STYLING (ELEGANT LIGHT EDITORIAL WEIGHT) */
         .rsvp-success-message {
             display: none;
             opacity: 0;
@@ -390,7 +379,6 @@
             <p class="subtitle">Victoria Golf Resort • Digana</p>
         </div>
 
-        <!-- INTERACTIVE COUPLE CARDS -->
         <div class="couple-grid">
             <div class="couple-card" onclick="toggleCoupleCard(this)">
                 <span class="role">Groom</span>
@@ -415,7 +403,6 @@
             </div>
         </div>
 
-        <!-- TABS NAV -->
         <div class="tabs-wrapper">
             <div class="luxury-tabs">
                 <button class="tab-btn active" onclick="openTab(event, 0, 'agenda')">Agenda</button>
@@ -428,7 +415,6 @@
 
         <div class="tab-content-container">
 
-            <!-- AGENDA CONTENT -->
             <div id="agenda" class="tab-content active">
                 <div class="timeline-wrapper">
                     <div class="timeline-box">
@@ -464,7 +450,6 @@
                 </div>
             </div>
 
-            <!-- VENUE CONTENT - GOOGLE MAP WITH OFFICIAL PIN WORKAROUND -->
             <div id="venue" class="tab-content">
                 <div class="hotel-info">
                     <div class="hotel-title">Victoria Golf Resort</div>
@@ -476,7 +461,6 @@
                 </div>
             </div>
 
-            <!-- RITUALS CONTENT -->
             <div id="rituals" class="tab-content">
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(this)">Poruwa Ceremony <span class="accordion-icon">+</span></button>
@@ -488,7 +472,6 @@
                 </div>
             </div>
 
-            <!-- MENU CONTENT -->
             <div id="menu" class="tab-content">
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(this)">Welcome & Soup <span class="accordion-icon">+</span></button>
@@ -516,15 +499,14 @@
 
         <div class="editorial-line"></div>
 
-        <!-- RSVP WRAPPER SECTION -->
         <div class="rsvp-section-wrapper" id="rsvp-section">
-            <!-- Dynamic Success Message Container (Clean Elegant Weight) -->
+
             <div class="rsvp-success-message" id="success-message">
                 <h2 class="success-title">Thank You for Your Response</h2>
                 <p class="success-text">Your attendance details have been successfully recorded.<br><span style="color: var(--gold-accent); font-weight: 400; font-family: 'Cinzel', serif; font-size: 0.9rem; letter-spacing: 2px; display: inline-block; margin-top: 10px;">Baanu & Raveena</span></p>
             </div>
 
-            <!-- RSVP Form -->
+        
             <form id="rsvp-form" onsubmit="handleRSVPSubmit(event)">
                 <div class="rsvp-instruction-english">Please complete the details below to kindly confirm your presence.</div>
                 <div class="form-group">
@@ -550,8 +532,7 @@
         </div>
 
     </div>
-
-    <!-- JAVASCRIPT LOGIC -->
+    
     <script>
         function openTab(evt, tabIndex, tabName) {
             const indicator = document.getElementById("tab-indicator");
@@ -599,9 +580,6 @@
             }
         }
 
-        /* RSVP SUBMISSION HANDLER WITH ACTIVE FORMSPREE INTEGRATION
-           REPLACES FORM WITH 'THANK YOU' EDITORIAL ENGLISH TEXT UPON SUCCESS
-        */
         function handleRSVPSubmit(event) {
             event.preventDefault();
             
@@ -609,24 +587,19 @@
             const submitBtn = document.getElementById('submit-btn');
             const successMsg = document.getElementById('success-message');
             
-            // Get data fields
             const guestName = document.getElementById('guest-name').value;
             const attendance = form.querySelector('input[name="Attendance"]:checked').value;
-            
-            // Your exact Formspree Endpoint Link
+
             const formspreeEndpoint = "https://formspree.io/f/xkoenwqb";
             
-            // Disable button during network request
             submitBtn.disabled = true;
             submitBtn.textContent = "Sending...";
 
-            // Create data object
             const formData = {
                 Name: guestName,
                 Attendance_Status: attendance
             };
 
-            // Send data via AJAX Fetch API to receive real-time emails
             fetch(formspreeEndpoint, {
                 method: 'POST',
                 headers: {
@@ -636,13 +609,11 @@
                 body: JSON.stringify(formData)
             })
             .then(response => {
-                // UI Transformation: Hide form and show Big Luxury Thank You Message smoothly
                 form.style.display = 'none';
                 successMsg.style.display = 'block';
             })
             .catch(error => {
                 console.error('Error submitting RSVP:', error);
-                // Fallback elegant switch
                 form.style.display = 'none';
                 successMsg.style.display = 'block';
             });
